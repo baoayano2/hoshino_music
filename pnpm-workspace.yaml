@@ -1,0 +1,6 @@
+allowBuilds:
+  '@biomejs/biome': false
+  electron: false
+  esbuild: false
+minimumReleaseAgeExclude:
+  - eslint-plugin-react-refresh@0.5.3

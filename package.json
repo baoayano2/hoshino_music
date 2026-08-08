@@ -1,0 +1,50 @@
+{
+  "name": "hoshino",
+  "private": true,
+  "version": "1.1.2",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "clean:build": "node -e \"require('node:fs').rmSync('dist-electron', { recursive: true, force: true })\"",
+    "build": "pnpm clean:build && tsc && vite build && electron-builder",
+    "lint": "eslint . --fix --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/react": "^18.2.64",
+    "@types/react-dom": "^18.2.21",
+    "@vitejs/plugin-react": "^4.2.1",
+    "electron": "^42.4.0",
+    "electron-builder": "^24.13.3",
+    "eslint": "^10.5.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.3",
+    "globals": "^17.6.0",
+    "lucide-react": "^1.18.0",
+    "music-metadata": "^11.13.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^5.2.2",
+    "typescript-eslint": "^8.61.0",
+    "vite": "^5.1.6",
+    "vite-plugin-electron": "^0.28.6",
+    "vite-plugin-electron-renderer": "^0.14.5"
+  },
+  "main": "dist-electron/main.js",
+  "dependencies": {
+    "detect-libc": "^2.1.2",
+    "kuroshiro": "^1.2.0",
+    "kuroshiro-analyzer-kuromoji": "^1.1.0",
+    "react-icons": "^5.7.0",
+    "semver": "^7.8.4",
+    "sharp": "^0.35.1",
+    "wanakana": "^5.3.1",
+    "youtubei.js": "^17.2.0",
+    "ytmusic-api": "^5.3.1"
+  },
+  "optionalDependencies": {
+    "@img/colour": "1.1.0",
+    "@img/sharp-win32-x64": "0.35.1"
+  }
+}
